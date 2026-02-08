@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+body {
+  background-color: #050505;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* --- Effetti Testo --- */
+.text-gradient {
+  background: linear-gradient(to right, #fff 20%, #a855f7 50%, #fff 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+/* --- Animazioni di Reveal e Fade --- */
+@keyframes reveal {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-reveal { animation: reveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+.animate-fade-in { animation: fade-in 1s ease-out 0.4s forwards; opacity: 0; }
+.animate-fade-in-delay { animation: fade-in 1s ease-out 0.8s forwards; opacity: 0; }
+.animate-fade-in-extra { animation: fade-in 1s ease-out 1.2s forwards; opacity: 0; }
+
+/* --- Spotlight Effect --- */
+.hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- Marquee (Technical Ecosystem) --- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--gap))); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* --- Marquee Slow (Sotto la foto) --- */
+@keyframes marquee-slow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee-slow {
+  animation: marquee-slow 20s linear infinite;
+}
+
+/* --- Carousel Utility --- */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* --- Project Cards Effects --- */
+.group {
+  transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1), border-color 0.3s ease;
+}
+
+/* Effetto sollevamento card al passaggio del mouse */
+.group:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  transform: translateY(-4px);
+}
+
+/* --- Bounce Animazione --- */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s infinite ease-in-out;
+}
