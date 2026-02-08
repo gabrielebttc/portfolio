@@ -28,8 +28,8 @@ const projects = [
     screens: ["/projects/stripe-1.jpg", "/projects/stripe-2.jpg"]
   },
   {
-    title: "SaaS Management System",
-    description: "Piattaforma gestionale per l'automazione dei processi aziendali e monitoraggio dati in tempo reale.",
+    title: "IELTS Essay Platform",
+    description: "This full-stack web application functions as an IELTS Essay Feedback Platform, enabling students to submit their essays\nand receive comprehensive, detailed feedback from teachers, who are also responsible for managing submissions,\nproviding evaluations, and overseeing payment processing integrated with Stripe.",
     tech: ["TypeScript", "Docker", "Nginx"],
     screens: ["/projects/saas-1.jpg", "/projects/saas-2.jpg"]
   }
