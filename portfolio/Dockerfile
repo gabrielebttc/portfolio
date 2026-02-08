@@ -6,8 +6,13 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2: Final
-FROM alpine:latest
-RUN mkdir -p /var/www/gabrielebuttice.com
-# Next.js con 'output: export' genera la cartella 'out'
-COPY --from=build /app/out /var/www/gabrielebuttice.com
+# Stage 2: Run
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=build /app/package*.json ./
+COPY --from=build /app/.next ./.next
+COPY --from=build /app/public ./public
+COPY --from=build /app/node_modules ./node_modules
+
+EXPOSE 3000
+CMD ["npm", "start"]
