@@ -35,8 +35,38 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+# Build the static file
 
-## use this to build with docker
+1. Prepara Next.js per l'export statico
+Apri il file next.config.ts (o .mjs) e assicurati che ci sia l'opzione output: 'export':
+
+``` TypeScript
+const nextConfig = {
+  output: 'export', 
+  // ... restanti opzioni
+};
+
+export default nextConfig;
 ```
-docker build -t portfolio-static .
+2. Genera i file
+Dalla cartella ~/portfolio/portfolio, esegui:
+
+``` Bash
+npm install
+npm run build
+```
+Questo comando creerà una cartella chiamata out. Al suo interno troverai l' index.html e tutte le cartelle statiche (_next, static, ecc.).
+
+3. Sposta i file in Nginx
+Ora devi copiare il contenuto di out nella cartella che Nginx sta servendo:
+
+``` Bash
+sudo cp -r out/* /var/www/gabrielebuttice.com/
+```
+
+4. Verifica Nginx
+Assicurati che i permessi siano corretti affinché Nginx possa leggere i file:
+
+```Bash
+sudo chown -R www-data:www-data /var/www/gabrielebuttice.com
 ```
