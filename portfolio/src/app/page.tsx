@@ -33,7 +33,7 @@ const projects = [
     title: "IELTS Essay Platform",
     description: "Enables students to submit essays and get detailed feedback from teachers, including Stripe payments.",
     tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Stripe Api", "Docker", "Nginx", "Typescript"],
-    screens: ["/static/projects/essay_platform/1.jpg", "/static/projects/essay_platform/2.jpg", "/static/projects/essay_platform/3.jpg", "/static/projects/essay_platform/4.jpg", "/static/projects/essay_platform/5.jpg"],
+    screens: ["/static/projects/essay_platform/1.jpg", "/static/projects/essay_platform/2.jpg", "/static/projects/essay_platform/3.jpg", "/static/projects/essay_platform/4.jpg", "/static/projects/essay_platform/5.jpg", "/static/projects/essay_platform/6.jpg", "/static/projects/essay_platform/7.jpg"],
     link: "https://essayplatform.gabrielebuttice.com"
   }
 ];
