@@ -20,21 +20,32 @@ const projects = [
     description: 'This web application helps construction site inspectors in Italy automate and manage their "Giornale dei Lavori" efficiently.',
     tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Docker", "Nginx", "Typescript"],
     screens: ["/static/projects/construction_sites_managment_platform/0-1.jpg", "/static/projects/construction_sites_managment_platform/0.jpg", "/static/projects/construction_sites_managment_platform/1.jpg", "/static/projects/construction_sites_managment_platform/2.jpg", "/static/projects/construction_sites_managment_platform/3.jpg", "/static/projects/construction_sites_managment_platform/4.jpg", "/static/projects/construction_sites_managment_platform/5.jpg", "/static/projects/construction_sites_managment_platform/6.jpg", "/static/projects/construction_sites_managment_platform/7.jpg", "/static/projects/construction_sites_managment_platform/8.jpg", "/static/projects/construction_sites_managment_platform/9.jpg", "/static/projects/construction_sites_managment_platform/10.jpg"],
-    link: "https://giornaledeilavori.gabrielebuttice.com"
+    link: "https://giornaledeilavori.gabrielebuttice.com",
+    repo_link: "https://github.com/gabrielebttc/giornale-dei-lavori-online"
   },
   {
     title: "Gym Managment Platform",
     description: "Designed to help fitness centers efficiently oversee customer information, course schedules, and subscription details.",
     tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Docker", "Nginx", "Typescript"],
         screens: ["/static/projects/gym_managment_platform/1.jpg", "/static/projects/gym_managment_platform/2.jpg", "/static/projects/gym_managment_platform/3.jpg", "/static/projects/gym_managment_platform/4.jpg", "/static/projects/gym_managment_platform/5.jpg", "/static/projects/gym_managment_platform/6.jpg"],
-    link: "https://gestionalepalestra.gabrielebuttice.com"
+    link: "https://gestionalepalestra.gabrielebuttice.com",
+    repo_link: "https://github.com/gabrielebttc/gestionale-sdm"
   },
   {
     title: "IELTS Essay Platform",
     description: "Enables students to submit essays and get detailed feedback from teachers, including Stripe payments.",
     tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Stripe Api", "Docker", "Nginx", "Typescript"],
     screens: ["/static/projects/essay_platform/1.jpg", "/static/projects/essay_platform/2.jpg", "/static/projects/essay_platform/3.jpg", "/static/projects/essay_platform/4.jpg", "/static/projects/essay_platform/5.jpg", "/static/projects/essay_platform/6.jpg", "/static/projects/essay_platform/7.jpg"],
-    link: "https://essayplatform.gabrielebuttice.com"
+    link: "https://essayplatform.gabrielebuttice.com",
+    repo_link: "https://github.com/gabrielebttc/giornale-dei-lavori-online"
+  },
+  {
+    title: "Portfolio",
+    description: "My personla portfolio.",
+    tech: ["Next.js", "React.js", "Docker", "Nginx", "Typescript"],
+    screens: ["/static/projects/portfolio/1.png", "/static/projects/portfolio/2.png"],
+    link: "https://gabrielebuttice.com",
+    repo_link: "https://github.com/gabrielebttc/portfolio"
   }
 ];
 
@@ -111,14 +122,14 @@ export default function Home() {
           <div className="flex flex-col justify-center lg:col-span-7 order-1">
             <header className="mb-4 overflow-hidden">
               <span className="inline-block animate-reveal text-sm font-bold tracking-[0.2em] text-purple-500 uppercase">
-                Available for projects — 2026
+                Open to new opportunities — 2026
               </span>
             </header>
             <h1 className="mb-6 text-5xl font-black leading-[1.1] tracking-tighter md:text-7xl lg:text-8xl">
               I’m <span className="text-gradient">Gabriele.</span>
             </h1>
             <p className="animate-fade-in text-2xl font-light leading-relaxed text-zinc-400 md:text-3xl max-w-2xl">
-              I help businesses <span className="text-white font-medium">automate processes</span> and manage data with custom web applications.
+              I build <span className="text-white font-medium">responsive web interfaces</span> with React, TypeScript, and modern CSS.
             </p>
             
             <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-extra">
@@ -169,8 +180,8 @@ export default function Home() {
             </div>
             
             <div className="mt-6 text-center">
-              <p className="text-lg font-bold tracking-tight text-white">SaaS & Management Platforms Expert</p>
-              <p className="text-sm text-zinc-500 uppercase tracking-widest mt-1">Full Stack Developer</p>
+              <p className="text-lg font-bold tracking-tight text-white">React · TypeScript · CSS · Node.js</p>
+              <p className="text-sm text-zinc-500 uppercase tracking-widest mt-1">Frontend Web Developer</p>
             </div>
 
             <div className="mt-8 w-full max-w-[380px] hidden lg:block overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)]">
@@ -203,12 +214,12 @@ export default function Home() {
                 </div>
 
                 {/* PROJECT LINK */}
-                <a 
-                  href={project.link} 
-                  target="_blank" 
+                <a
+                  href={project.link}
+                  target="_blank"
                   className="inline-flex items-center gap-2 text-white font-bold hover:text-purple-400 transition-colors group/link"
                 >
-                  View live project 
+                  View live project
                   <svg className="w-5 h-5 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                   </svg>
