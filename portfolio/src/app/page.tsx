@@ -24,12 +24,12 @@ const projects = [
     repo_link: "https://github.com/gabrielebttc/giornale-dei-lavori-online"
   },
   {
-    title: "Gym Managment Platform",
-    description: "Designed to help fitness centers efficiently oversee customer information, course schedules, and subscription details.",
-    tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Docker", "Nginx", "Typescript"],
-        screens: ["/static/projects/gym_managment_platform/1.jpg", "/static/projects/gym_managment_platform/2.jpg", "/static/projects/gym_managment_platform/3.jpg", "/static/projects/gym_managment_platform/4.jpg", "/static/projects/gym_managment_platform/5.jpg", "/static/projects/gym_managment_platform/6.jpg"],
-    link: "https://gestionalepalestra.gabrielebuttice.com",
-    repo_link: "https://github.com/gabrielebttc/gestionale-sdm"
+    title: "Portfolio",
+    description: "My personla portfolio.",
+    tech: ["Next.js", "React.js", "Docker", "Nginx", "Typescript"],
+    screens: ["/static/projects/portfolio/1.png", "/static/projects/portfolio/2.png"],
+    link: "https://gabrielebuttice.com",
+    repo_link: "https://github.com/gabrielebttc/portfolio"
   },
   {
     title: "IELTS Essay Platform",
@@ -37,15 +37,15 @@ const projects = [
     tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Stripe Api", "Docker", "Nginx", "Typescript"],
     screens: ["/static/projects/essay_platform/1.jpg", "/static/projects/essay_platform/2.jpg", "/static/projects/essay_platform/3.jpg", "/static/projects/essay_platform/4.jpg", "/static/projects/essay_platform/5.jpg", "/static/projects/essay_platform/6.jpg", "/static/projects/essay_platform/7.jpg"],
     link: "https://essayplatform.gabrielebuttice.com",
-    repo_link: "https://github.com/gabrielebttc/giornale-dei-lavori-online"
+    repo_link: "https://github.com/gabrielebttc/essay-platform"
   },
   {
-    title: "Portfolio",
-    description: "My personla portfolio.",
-    tech: ["Next.js", "React.js", "Docker", "Nginx", "Typescript"],
-    screens: ["/static/projects/portfolio/1.png", "/static/projects/portfolio/2.png"],
-    link: "https://gabrielebuttice.com",
-    repo_link: "https://github.com/gabrielebttc/portfolio"
+    title: "Gym Managment Platform",
+    description: "Designed to help fitness centers efficiently oversee customer information, course schedules, and subscription details.",
+    tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Docker", "Nginx", "Typescript"],
+        screens: ["/static/projects/gym_managment_platform/1.jpg", "/static/projects/gym_managment_platform/2.jpg", "/static/projects/gym_managment_platform/3.jpg", "/static/projects/gym_managment_platform/4.jpg", "/static/projects/gym_managment_platform/5.jpg", "/static/projects/gym_managment_platform/6.jpg"],
+    link: "https://gestionalepalestra.gabrielebuttice.com",
+    repo_link: "https://github.com/gabrielebttc/gestionaleSDM"
   }
 ];
 
