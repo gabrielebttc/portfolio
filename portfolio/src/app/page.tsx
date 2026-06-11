@@ -58,6 +58,7 @@ const projects = [
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const worksRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
   const scrollRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [showContacts, setShowContacts] = useState(false);
   const [lightbox, setLightbox] = useState<{ images: string[]; currentIndex: number } | null>(null);
@@ -102,6 +103,10 @@ export default function Home() {
 
   const scrollToWorks = () => {
     worksRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToSkills = () => {
+    skillsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scroll = (index: number, direction: "left" | "right") => {
@@ -163,7 +168,14 @@ export default function Home() {
                 )}
               </div>
 
-              <button 
+              <button
+                onClick={scrollToSkills}
+                className="group rounded-full border border-zinc-700 px-8 py-4 font-bold transition-all hover:bg-zinc-800"
+              >
+                My skills ↓
+              </button>
+
+              <button
                 onClick={scrollToWorks}
                 className="group rounded-full border border-zinc-700 px-8 py-4 font-bold transition-all hover:bg-zinc-800"
               >
@@ -202,49 +214,77 @@ export default function Home() {
       </main>
 
       {/* SKILLS SECTION */}
-      <section className="relative z-10 mx-auto max-w-7xl px-6 pb-16">
+      <section ref={skillsRef} className="relative z-10 mx-auto max-w-7xl px-6 pb-16">
         <div className="rounded-[2.5rem] border border-zinc-800 bg-zinc-900/30 p-8 lg:p-14">
           <h2 className="mb-2 text-3xl font-black tracking-tighter md:text-4xl">Skills &amp; Technologies</h2>
-          <p className="mb-10 text-zinc-500 text-sm uppercase tracking-widest">A quick read for recruiters</p>
+          <p className="mb-10 text-zinc-500 text-sm uppercase tracking-widest">Technologies I work with</p>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">Frontend</h3>
-              <ul className="space-y-2 text-zinc-300 text-sm">
-                <li>React.js</li>
-                <li>React Native</li>
-                <li>Next.js</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>Expo</li>
+              <ul className="space-y-3 text-zinc-300 text-sm">
+                {[
+                  { label: "React.js", icon: "react", color: "61DAFB" },
+                  { label: "React Native", icon: "react", color: "61DAFB" },
+                  { label: "Next.js", icon: "nextdotjs", color: "ffffff" },
+                  { label: "TypeScript", icon: "typescript", color: "3178C6" },
+                  { label: "Tailwind CSS", icon: "tailwindcss", color: "06B6D4" },
+                  { label: "Expo", icon: "expo", color: "ffffff" },
+                ].map(({ label, icon, color }) => (
+                  <li key={label} className="flex items-center gap-2">
+                    <img src={`https://cdn.simpleicons.org/${icon}/${color}`} className="h-4 w-4 shrink-0 opacity-80" alt={label} />
+                    {label}
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">Backend</h3>
-              <ul className="space-y-2 text-zinc-300 text-sm">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Laravel (PHP)</li>
-                <li>Blade Templates</li>
-                <li>REST APIs</li>
+              <ul className="space-y-3 text-zinc-300 text-sm">
+                {[
+                  { label: "Node.js", icon: "nodedotjs", color: "339933" },
+                  { label: "Express", icon: "express", color: "ffffff" },
+                  { label: "Laravel (PHP)", icon: "laravel", color: "FF2D20" },
+                  { label: "Blade Templates", icon: "laravel", color: "FF2D20" },
+                  { label: "REST APIs", icon: null, color: null },
+                ].map(({ label, icon, color }) => (
+                  <li key={label} className="flex items-center gap-2">
+                    {icon ? <img src={`https://cdn.simpleicons.org/${icon}/${color}`} className="h-4 w-4 shrink-0 opacity-80" alt={label} /> : <span className="h-4 w-4 shrink-0" />}
+                    {label}
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">Databases</h3>
-              <ul className="space-y-2 text-zinc-300 text-sm">
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>Redis</li>
-                <li>SQLite</li>
+              <ul className="space-y-3 text-zinc-300 text-sm">
+                {[
+                  { label: "PostgreSQL", icon: "postgresql", color: "4169E1" },
+                  { label: "MongoDB", icon: "mongodb", color: "47A248" },
+                  { label: "Redis", icon: "redis", color: "DC382D" },
+                  { label: "SQLite", icon: "sqlite", color: "7BBFFF" },
+                ].map(({ label, icon, color }) => (
+                  <li key={label} className="flex items-center gap-2">
+                    <img src={`https://cdn.simpleicons.org/${icon}/${color}`} className="h-4 w-4 shrink-0 opacity-80" alt={label} />
+                    {label}
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">DevOps &amp; Tools</h3>
-              <ul className="space-y-2 text-zinc-300 text-sm">
-                <li>Docker</li>
-                <li>Nginx</li>
-                <li>Git &amp; GitHub</li>
-                <li>Linux / VPS</li>
-                <li>Stripe API</li>
+              <ul className="space-y-3 text-zinc-300 text-sm">
+                {[
+                  { label: "Docker", icon: "docker", color: "2496ED" },
+                  { label: "Nginx", icon: "nginx", color: "009639" },
+                  { label: "Git & GitHub", icon: "github", color: "ffffff" },
+                  { label: "Linux / VPS", icon: "linux", color: "FCC624" },
+                  { label: "Stripe API", icon: "stripe", color: "6772E5" },
+                ].map(({ label, icon, color }) => (
+                  <li key={label} className="flex items-center gap-2">
+                    <img src={`https://cdn.simpleicons.org/${icon}/${color}`} className="h-4 w-4 shrink-0 opacity-80" alt={label} />
+                    {label}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
