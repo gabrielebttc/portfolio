@@ -5,11 +5,17 @@ import { useEffect, useRef, useState } from "react";
 
 const stack = [
   { name: "React", icon: "react", color: "61DAFB" },
+  { name: "React Native", icon: "react", color: "61DAFB" },
   { name: "TypeScript", icon: "typescript", color: "3178C6" },
   { name: "Next.js", icon: "nextdotjs", color: "ffffff" },
   { name: "Node.js", icon: "nodedotjs", color: "339933" },
   { name: "Express", icon: "express", color: "ffffff" },
+  { name: "Laravel", icon: "laravel", color: "FF2D20" },
   { name: "PostgreSQL", icon: "postgresql", color: "4169E1" },
+  { name: "MongoDB", icon: "mongodb", color: "47A248" },
+  { name: "Redis", icon: "redis", color: "DC382D" },
+  { name: "SQLite", icon: "sqlite", color: "7BBFFF" },
+  { name: "Expo", icon: "expo", color: "ffffff" },
   { name: "Docker", icon: "docker", color: "2496ED" },
   { name: "Nginx", icon: "nginx", color: "009639" },
 ];
@@ -129,7 +135,7 @@ export default function Home() {
               I’m <span className="text-gradient">Gabriele.</span>
             </h1>
             <p className="animate-fade-in text-2xl font-light leading-relaxed text-zinc-400 md:text-3xl max-w-2xl">
-              I build <span className="text-white font-medium">responsive web interfaces</span> with React, TypeScript, and modern CSS.
+              I build <span className="text-white font-medium">full-stack web and mobile applications</span> with React, React Native, Node.js, and modern tools.
             </p>
             
             <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-extra">
@@ -180,8 +186,8 @@ export default function Home() {
             </div>
             
             <div className="mt-6 text-center">
-              <p className="text-lg font-bold tracking-tight text-white">React · TypeScript · CSS · Node.js</p>
-              <p className="text-sm text-zinc-500 uppercase tracking-widest mt-1">Frontend Web Developer</p>
+              <p className="text-lg font-bold tracking-tight text-white">React · React Native · Node.js · Laravel</p>
+              <p className="text-sm text-zinc-500 uppercase tracking-widest mt-1">Full Stack Web &amp; Mobile Developer</p>
             </div>
 
             <div className="mt-8 w-full max-w-[380px] hidden lg:block overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)]">
@@ -194,6 +200,56 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {/* SKILLS SECTION */}
+      <section className="relative z-10 mx-auto max-w-7xl px-6 pb-16">
+        <div className="rounded-[2.5rem] border border-zinc-800 bg-zinc-900/30 p-8 lg:p-14">
+          <h2 className="mb-2 text-3xl font-black tracking-tighter md:text-4xl">Skills &amp; Technologies</h2>
+          <p className="mb-10 text-zinc-500 text-sm uppercase tracking-widest">A quick read for recruiters</p>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">Frontend</h3>
+              <ul className="space-y-2 text-zinc-300 text-sm">
+                <li>React.js</li>
+                <li>React Native</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>Expo</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">Backend</h3>
+              <ul className="space-y-2 text-zinc-300 text-sm">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Laravel (PHP)</li>
+                <li>Blade Templates</li>
+                <li>REST APIs</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">Databases</h3>
+              <ul className="space-y-2 text-zinc-300 text-sm">
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>SQLite</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-purple-400">DevOps &amp; Tools</h3>
+              <ul className="space-y-2 text-zinc-300 text-sm">
+                <li>Docker</li>
+                <li>Nginx</li>
+                <li>Git &amp; GitHub</li>
+                <li>Linux / VPS</li>
+                <li>Stripe API</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* MY WORKS SECTION */}
       <section ref={worksRef} className="relative z-10 mx-auto max-w-7xl px-6 py-20">
