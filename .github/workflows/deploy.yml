@@ -21,6 +21,7 @@ jobs:
             cd ${{ secrets.VPS_PROJECT_PATH }}
             git pull origin main
             cd portfolio
-            docker compose down
+            docker stop portfolio-site 2>/dev/null && echo "Container fermato" || echo "Container non trovato, skip"
+            docker rm portfolio-site 2>/dev/null && echo "Container rimosso" || echo "Niente da rimuovere, skip"
             docker compose up --build -d
             docker image prune -f
