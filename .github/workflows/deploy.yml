@@ -21,5 +21,6 @@ jobs:
             cd ${{ secrets.VPS_PROJECT_PATH }}
             git pull origin main
             cd portfolio
+            docker compose down
             docker compose up --build -d
             docker image prune -f
