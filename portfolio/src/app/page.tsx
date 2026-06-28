@@ -22,6 +22,14 @@ const stack = [
 
 const projects = [
   {
+    title: "TaskFlow",
+    description: "Laravel-based project management platform that allows teams to organize work through organizations, projects, and tasks, with role-based access control, REST API, email notifications, and automated reporting.",
+    tech: ["Laravel", "PHP", "MySQL", "Redis", "Docker", "Nginx", "Tailwind CSS"],
+    screens: ["/static/projects/taskflow/1.png", "/static/projects/taskflow/2.png", "/static/projects/taskflow/3.png", "/static/projects/taskflow/4.png", "/static/projects/taskflow/5.png"],
+    link: "https://taskflow.gabrielebuttice.com",
+    repo_link: "https://github.com/gabrielebttc/taskflow"
+  },
+  {
     title: "Construction Site Inspection Web App",
     description: 'This web application helps construction site inspectors in Italy automate and manage their "Giornale dei Lavori" efficiently.',
     tech: ["Vite", "React.js", "Node.js", "Express", "PostgreSQL", "Docker", "Nginx", "Typescript"],
